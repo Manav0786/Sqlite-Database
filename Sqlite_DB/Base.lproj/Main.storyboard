@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,153 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sqlite_DB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="IcL-kC-Pb6">
+                                <rect key="frame" x="20" y="258" width="335" height="151"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xSl-EA-Fxw">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWC-9T-ngk">
+                                        <rect key="frame" x="0.0" y="67" width="335" height="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter mobile" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2t-BR-tiS">
+                                        <rect key="frame" x="0.0" y="134" width="335" height="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rGI-hh-KQ2">
+                                <rect key="frame" x="20" y="479" width="335" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2Z-wC-1QK">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionSaveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ocO-A6-Nyt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sip-fX-zz5">
+                                        <rect key="frame" x="177.5" y="0.0" width="157.5" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.19505263040000001" blue="0.88069661460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Show">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionShowDataBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="abe-Ym-qjf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Nlf-eJ-kZZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rGI-hh-KQ2" secondAttribute="trailing" constant="20" id="AUW-LQ-MbW"/>
+                            <constraint firstItem="rGI-hh-KQ2" firstAttribute="top" secondItem="IcL-kC-Pb6" secondAttribute="bottom" constant="70" id="BTz-7p-373"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IcL-kC-Pb6" secondAttribute="trailing" constant="20" id="L7Z-go-Eoa"/>
+                            <constraint firstItem="IcL-kC-Pb6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aha-7R-4F0"/>
+                            <constraint firstItem="IcL-kC-Pb6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h8p-87-sq0"/>
+                            <constraint firstItem="rGI-hh-KQ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lOt-RH-ZCW"/>
+                            <constraint firstItem="IcL-kC-Pb6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w1f-8e-8xa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="VWC-9T-ngk" id="XFr-Tm-0QK"/>
+                        <outlet property="txtMobile" destination="D2t-BR-tiS" id="ej0-MS-VgD"/>
+                        <outlet property="txtName" destination="xSl-EA-Fxw" id="2bH-Nw-HPV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="204" y="137"/>
+        </scene>
+        <!--Data LoadVC-->
+        <scene sceneID="ubw-hY-AL1">
+            <objects>
+                <viewController storyboardIdentifier="DataLoadVC" id="RrP-bg-knH" customClass="DataLoadVC" customModule="Sqlite_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XI6-Pp-D6O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-6R-Htc">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="BgT-Va-XO7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BgT-Va-XO7" id="mMb-4w-uRO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RrP-bg-knH" id="Bds-cj-dPC"/>
+                                    <outlet property="delegate" destination="RrP-bg-knH" id="iUo-SB-Qg6"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fz-aT-Xa3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-qO-IzF">
+                                        <rect key="frame" x="22" y="15" width="34" height="30"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionBackBtn:" destination="RrP-bg-knH" eventType="touchUpInside" id="xW2-Y5-ZHs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jAa-qO-IzF" firstAttribute="leading" secondItem="0fz-aT-Xa3" secondAttribute="leading" constant="22" id="3xm-pM-xuK"/>
+                                    <constraint firstItem="jAa-qO-IzF" firstAttribute="centerY" secondItem="0fz-aT-Xa3" secondAttribute="centerY" id="8Wh-4C-sca"/>
+                                    <constraint firstAttribute="height" constant="60" id="dbg-ax-cG3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0fz-aT-Xa3" firstAttribute="leading" secondItem="M7v-9W-Fex" secondAttribute="leading" id="AER-9c-zNe"/>
+                            <constraint firstItem="0fz-aT-Xa3" firstAttribute="top" secondItem="M7v-9W-Fex" secondAttribute="top" id="DI8-jr-aog"/>
+                            <constraint firstItem="jqg-6R-Htc" firstAttribute="leading" secondItem="M7v-9W-Fex" secondAttribute="leading" id="RVQ-u6-gS9"/>
+                            <constraint firstItem="jqg-6R-Htc" firstAttribute="top" secondItem="0fz-aT-Xa3" secondAttribute="bottom" id="cAy-ti-Ykc"/>
+                            <constraint firstItem="M7v-9W-Fex" firstAttribute="bottom" secondItem="jqg-6R-Htc" secondAttribute="bottom" id="cNF-ha-QTf"/>
+                            <constraint firstItem="0fz-aT-Xa3" firstAttribute="trailing" secondItem="M7v-9W-Fex" secondAttribute="trailing" id="hjy-Ye-Mav"/>
+                            <constraint firstItem="M7v-9W-Fex" firstAttribute="trailing" secondItem="jqg-6R-Htc" secondAttribute="trailing" id="oPP-Kn-juD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M7v-9W-Fex"/>
+                    </view>
+                    <connections>
+                        <outlet property="tbl" destination="jqg-6R-Htc" id="ERs-lj-zfA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKj-mr-qQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.39999999999998" y="115.59220389805098"/>
         </scene>
     </scenes>
 </document>

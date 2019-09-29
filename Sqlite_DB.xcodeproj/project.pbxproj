@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A609198981354A2D2DDA301 /* Pods_Sqlite_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47AA2F4E03005CC2EBE7C1 /* Pods_Sqlite_DB.framework */; };
 		EE94388923374456008D5851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94388823374456008D5851 /* AppDelegate.swift */; };
 		EE94388B23374456008D5851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94388A23374456008D5851 /* ViewController.swift */; };
 		EE94388E23374456008D5851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE94388C23374456008D5851 /* Main.storyboard */; };
 		EE94389023374459008D5851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE94388F23374459008D5851 /* Assets.xcassets */; };
 		EE94389323374459008D5851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE94389123374459008D5851 /* LaunchScreen.storyboard */; };
+		EE94389D23374605008D5851 /* DBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94389B23374605008D5851 /* DBConnection.swift */; };
+		EE94389E23374605008D5851 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94389C23374605008D5851 /* Product.swift */; };
+		EE9438A02337490F008D5851 /* DataLoadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94389F2337490F008D5851 /* DataLoadVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A47AA2F4E03005CC2EBE7C1 /* Pods_Sqlite_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sqlite_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		594A35174C44E924F35026D4 /* Pods-Sqlite_DB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sqlite_DB.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sqlite_DB/Pods-Sqlite_DB.release.xcconfig"; sourceTree = "<group>"; };
+		B86926057E5ADD77EF889E3E /* Pods-Sqlite_DB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sqlite_DB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sqlite_DB/Pods-Sqlite_DB.debug.xcconfig"; sourceTree = "<group>"; };
 		EE94388523374456008D5851 /* Sqlite_DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sqlite_DB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE94388823374456008D5851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE94388A23374456008D5851 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,9 @@
 		EE94388F23374459008D5851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE94389223374459008D5851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE94389423374459008D5851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE94389B23374605008D5851 /* DBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBConnection.swift; sourceTree = "<group>"; };
+		EE94389C23374605008D5851 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		EE94389F2337490F008D5851 /* DataLoadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A609198981354A2D2DDA301 /* Pods_Sqlite_DB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3560818625D31A7B39B518CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B86926057E5ADD77EF889E3E /* Pods-Sqlite_DB.debug.xcconfig */,
+				594A35174C44E924F35026D4 /* Pods-Sqlite_DB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		615E5F416C4938A6030F8B2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A47AA2F4E03005CC2EBE7C1 /* Pods_Sqlite_DB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE94387C23374456008D5851 = {
 			isa = PBXGroup;
 			children = (
 				EE94388723374456008D5851 /* Sqlite_DB */,
 				EE94388623374456008D5851 /* Products */,
+				3560818625D31A7B39B518CB /* Pods */,
+				615E5F416C4938A6030F8B2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +86,23 @@
 			children = (
 				EE94388823374456008D5851 /* AppDelegate.swift */,
 				EE94388A23374456008D5851 /* ViewController.swift */,
+				EE94389F2337490F008D5851 /* DataLoadVC.swift */,
 				EE94388C23374456008D5851 /* Main.storyboard */,
+				EE94389A23374605008D5851 /* DataBase */,
 				EE94388F23374459008D5851 /* Assets.xcassets */,
 				EE94389123374459008D5851 /* LaunchScreen.storyboard */,
 				EE94389423374459008D5851 /* Info.plist */,
 			);
 			path = Sqlite_DB;
+			sourceTree = "<group>";
+		};
+		EE94389A23374605008D5851 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				EE94389B23374605008D5851 /* DBConnection.swift */,
+				EE94389C23374605008D5851 /* Product.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE94389723374459008D5851 /* Build configuration list for PBXNativeTarget "Sqlite_DB" */;
 			buildPhases = (
+				FAE4A11CBE2A3118BE3B5727 /* [CP] Check Pods Manifest.lock */,
 				EE94388123374456008D5851 /* Sources */,
 				EE94388223374456008D5851 /* Frameworks */,
 				EE94388323374456008D5851 /* Resources */,
+				13E440EFB6AA6DE430F097AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +173,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13E440EFB6AA6DE430F097AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sqlite_DB/Pods-Sqlite_DB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sqlite_DB/Pods-Sqlite_DB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE4A11CBE2A3118BE3B5727 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sqlite_DB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE94388123374456008D5851 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE94389D23374605008D5851 /* DBConnection.swift in Sources */,
+				EE9438A02337490F008D5851 /* DataLoadVC.swift in Sources */,
+				EE94389E23374605008D5851 /* Product.swift in Sources */,
 				EE94388B23374456008D5851 /* ViewController.swift in Sources */,
 				EE94388923374456008D5851 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +365,7 @@
 		};
 		EE94389823374459008D5851 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B86926057E5ADD77EF889E3E /* Pods-Sqlite_DB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +384,7 @@
 		};
 		EE94389923374459008D5851 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 594A35174C44E924F35026D4 /* Pods-Sqlite_DB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
